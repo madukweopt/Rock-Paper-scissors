@@ -13,29 +13,17 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return 'Draw! you made the same selection with the computer'
 
-    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+    } else if (
+        (playerSelection === 'rock' && computerSelection === 'paper') || 
+        (playerSelection === 'paper' && computerSelection === 'scissors') ||
+        (playerSelection === 'scissors' && computerSelection === 'rock')
+    )   {
         computerScore++
-        return 'computer wins! paper covers rock'
+        console.log(`computer wins! ${computerSelection} beats ${playerSelection}`)
 
-    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        computerScore++
-        return 'computer wins! scissors cuts paper'
-
-    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        computerScore++
-        return 'computer wins! rock blunts scissors'
-
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    } else {
         playerScore++
-        return 'you win! paper covers rock'
-
-    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        playerScore++
-        return 'you win! scissors cuts paper'
-
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        playerScore++
-        return 'you win! rock blunts scissors'
+        console.log(`you win! ${playerSelection} beats ${computerSelection}`)
         
     }
     
