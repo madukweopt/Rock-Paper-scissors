@@ -13,7 +13,7 @@ h1 {
 font-weight: bold;
 font-size: 70px;
 background-color: black;
-color: red;
+color: rgb(182, 162, 69);
 }
 
 .message,
@@ -45,4 +45,8 @@ em {
     background-color: rgb(182, 162, 69);
     border-radius: 15px;
     
+}
+
+#btn:hover {
+    background-color: blueviolet;
 }
