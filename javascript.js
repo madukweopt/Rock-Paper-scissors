@@ -1,10 +1,9 @@
-let computerScore = 0;
-let playerScore = 0;
+let computerScore = document.querySelector('.computer-score');
+let playerScore = document.querySelector('.player-score');
 const rockbtn = document.querySelector('.rockbtn');
 const paperbtn = document.querySelector('.paperbtn');
 const scissorsbtn = document.querySelector('.scissorsbtn');
-const displayResults = document.querySelector('.display-results');
-
+let displayResults = document.querySelector('.display-results');
 
 // This function will randomly return a value from the array of choices.
 function computerPlay() {
@@ -25,11 +24,11 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'rock')
     )   {
-        computerScore++
+        computerScore.textContent++
         displayResults.textContent = `computer wins! ${computerSelection} beats ${playerSelection}`
 
     } else {
-        playerScore++
+        playerScore.textContent++
         displayResults.textContent = `you win! ${playerSelection} beats ${computerSelection}`
         
     }
