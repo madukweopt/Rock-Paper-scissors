@@ -3,6 +3,8 @@ let playerScore = 0;
 const rockbtn = document.querySelector('.rockbtn');
 const paperbtn = document.querySelector('.paperbtn');
 const scissorsbtn = document.querySelector('.scissorsbtn');
+const displayResults = document.querySelector('.display-results');
+
 
 // This function will randomly return a value from the array of choices.
 function computerPlay() {
@@ -16,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
     console.log('1. ', playerSelection, '2. ', computerSelection);
 
     if (playerSelection === computerSelection) {
-        return 'Draw! you made the same selection with the computer'
+        displayResults.textContent = `Draw! ${playerSelection} ties with ${computerSelection}`;
 
     } else if (
         (playerSelection === 'rock' && computerSelection === 'paper') || 
@@ -24,11 +26,11 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'scissors' && computerSelection === 'rock')
     )   {
         computerScore++
-        console.log(`computer wins! ${computerSelection} beats ${playerSelection}`)
+        displayResults.textContent = `computer wins! ${computerSelection} beats ${playerSelection}`
 
     } else {
         playerScore++
-        console.log(`you win! ${playerSelection} beats ${computerSelection}`)
+        displayResults.textContent = `you win! ${playerSelection} beats ${computerSelection}`
         
     }
     
