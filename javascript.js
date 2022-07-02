@@ -14,26 +14,57 @@ function computerPlay() {
 
 // This function plays a single round of the game.
 function playRound(playerSelection, computerSelection) {
+    
+    displayResults.style.fontSize = '30px';
     console.log('1. ', playerSelection, '2. ', computerSelection);
 
     if (playerSelection === computerSelection) {
         displayResults.textContent = `Draw! ${playerSelection} ties with ${computerSelection}`;
+        displayResults.style.color = 'white';
+        
 
     } else if (
         (playerSelection === 'rock' && computerSelection === 'paper') || 
         (playerSelection === 'paper' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'rock')
     )   {
-        computerScore.textContent++
+
         displayResults.textContent = `computer wins! ${computerSelection} beats ${playerSelection}`
+        displayResults.style.color = 'red';
+        computerScore.textContent++;
+      
+        if(computerScore.textContent == 5) {
+            displayResults.textContent = 'COMPUTER WON';
+            displayResults.style.cssText = "font-size: 50px";
+            computerScore.textContent = 0;
+            playerScore.textContent = 0;
+            
+            
+
+        }
+        
 
     } else {
-        playerScore.textContent++
         displayResults.textContent = `you win! ${playerSelection} beats ${computerSelection}`
+        displayResults.style.color = 'blue';
+        playerScore.textContent++;
+       
+
+        if(playerScore.textContent == 5) {
+            displayResults.textContent = 'YOU WON THE COMPUTER';
+            displayResults.style.fontSize = '50px';
+            playerScore.textContent = 0;
+            computerScore.textContent = 0;
+            
+            
+        }
+    
         
     }
     
 }
+
+let rounds = 0;
 
 rockbtn.addEventListener('click', function() {
     const computerSelection = computerPlay();
@@ -50,26 +81,3 @@ scissorsbtn.addEventListener('click', function() {
     const playerSelection = 'scissors';
     console.log(playRound(playerSelection, computerSelection));
 })
-
-
-/*
-// this function plays the game for 5 rounds and returns a winner.
-function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection =  prompt('enter what to throw',  'rock, paper, scissors').toLowerCase();
-        const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    }
-    if (playerScore > computerScore) {
-        return 'you beat the computer! make some noise1'
-
-    } else if (playerScore < computerScore)  {
-        return 'you were beaten by the computer! practice more'
-
-    } else {
-        return 'you tie with the computer! not too bad'
-    
-    }
-}
-console.log(game());
-*/
