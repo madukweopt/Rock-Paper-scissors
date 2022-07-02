@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ROCK PAPER SCISSORS</h1>
-    <div class="display-score">
-        <p>player score:</p><span class="player-score">0</span>
-        <p>computer score:</p><span class="computer-score">0</span>
+    <div class="container">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <p class="message">The first to score 5 wins the game</p>
+        <div class="display-score">
+           <p>player score: <span class="player-score">0</span></p>
+           <p>computer score: <span class="computer-score">0</span></p>
     
+        </div>
+        <em>choose what to throw</em>
+        <div class="button-container">
+           <button class="rockbtn" id="btn">rock</button>
+           <button class="paperbtn" id="btn">paper</button>
+           <button class="scissorsbtn" id="btn">scissors</button>
+        </div>
+        <div class="display-results"></div>
     </div>
-    <div class="button-container">
-        <button class="rockbtn">rock</button>
-        <button class="paperbtn">paper</button>
-        <button class="scissorsbtn">scissors</button>
-    </div>
-    <div class="display-results">
-
-    </div>
-
 
 </body>
 <script src="javascript.js"></script>
