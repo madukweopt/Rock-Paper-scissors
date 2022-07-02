@@ -38,11 +38,7 @@ function playRound(playerSelection, computerSelection) {
             displayResults.style.cssText = "font-size: 50px";
             computerScore.textContent = 0;
             playerScore.textContent = 0;
-            
-            
-
-        }
-        
+        }      
 
     } else {
         displayResults.textContent = `you win! ${playerSelection} beats ${computerSelection}`
@@ -57,14 +53,9 @@ function playRound(playerSelection, computerSelection) {
             computerScore.textContent = 0;
             
             
-        }
-    
-        
-    }
-    
+        }   
+    }   
 }
-
-let rounds = 0;
 
 rockbtn.addEventListener('click', function() {
     const computerSelection = computerPlay();
