@@ -1,3 +1,8 @@
+let computerScore = 0;
+let playerScore = 0;
+const rockbtn = document.querySelector('.rockbtn');
+const paperbtn = document.querySelector('.paperbtn');
+const scissorsbtn = document.querySelector('.scissorsbtn');
 
 // This function will randomly return a value from the array of choices.
 function computerPlay() {
@@ -28,9 +33,25 @@ function playRound(playerSelection, computerSelection) {
     }
     
 }
-let computerScore = 0;
-let playerScore = 0;
 
+rockbtn.addEventListener('click', function() {
+    const computerSelection = computerPlay();
+    const playerSelection = 'rock';
+    console.log(playRound(playerSelection, computerSelection));
+})
+paperbtn.addEventListener('click', function() {
+    const computerSelection = computerPlay();
+    const playerSelection = 'paper';
+    console.log(playRound(playerSelection, computerSelection));
+})
+scissorsbtn.addEventListener('click', function() {
+    const computerSelection = computerPlay();
+    const playerSelection = 'scissors';
+    console.log(playRound(playerSelection, computerSelection));
+})
+
+
+/*
 // this function plays the game for 5 rounds and returns a winner.
 function game() {
     for (let i = 0; i < 5; i++) {
@@ -50,3 +71,4 @@ function game() {
     }
 }
 console.log(game());
+*/
