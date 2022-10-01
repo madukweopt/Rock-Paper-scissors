@@ -14,8 +14,7 @@ function computerPlay() {
 
 // This function plays a single round of the game.
 function playRound(playerSelection, computerSelection) {
-    
-    displayResults.style.fontSize = '30px';
+     displayResults.style.fontSize = '30px';
     console.log('1. ', playerSelection, '2. ', computerSelection);
 
     if (playerSelection === computerSelection) {
