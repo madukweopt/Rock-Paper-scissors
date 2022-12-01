@@ -11,7 +11,7 @@ body {
 
 h1 {
 font-weight: bold;
-font-size: 70px;
+font-size: 4rem;
 background-color: black;
 color: rgb(182, 162, 69);
 
@@ -25,24 +25,26 @@ em {
 }
 
 .display-score {
-    font-size: 3em;
+    font-size: 1.5rem;
     margin-top: 5px;
     display: flex;
-    gap: 100px;
+    gap: 4rem;
     margin-bottom: 12px;
 }
 
 .button-container {
     display: flex;
-    gap: 25px;
+    gap: 1.2rem;
     margin-top: 1em;
     margin-bottom: 3em;
+    margin-right: 8px;
 }
 
 #btn {
-    padding: 12px;
-    font-size: 30px;
-    width: 200px;
+    padding: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 1.5rem;
+    width: 25vw;
     background-color: rgb(182, 162, 69);
     border-radius: 15px;
     
